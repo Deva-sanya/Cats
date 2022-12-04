@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Cat updated</h1>
-<form action="/Cats/update" method="POST">
+<form action="/Cats/update" method="GET">
 
     Age of the cat: <input type="text" name="age">
     <br><br>
@@ -60,7 +60,7 @@
     <br><br>
 </form>
 <p>
-<form action="/Cats/mainJsp" method="GET"></p>
+<form action="/Cats/mainJsp" method="POST"></p>
     <button> Return to main page.</button>
     <br><br>
 </form>

@@ -169,12 +169,15 @@ public class CatDaoImplementation implements CatDao {
             if (connection != null) {
 
                 PreparedStatement preparedStmt = connection.prepareStatement
-                        ("UPDATE Cats SET age = ? , name = ? , gender = ? , color = ? WHERE id = ?");
+                        ("UPDATE Cats SET age = ? , name = ? , gender = ? , fatherid = ? , motherid = ? , color = ? WHERE id = ?");
+
                 preparedStmt.setLong(1, cat.getAge());
                 preparedStmt.setString(2, cat.getName());
                 preparedStmt.setString(3, cat.getGender());
-                preparedStmt.setString(4, cat.getColor());
-                preparedStmt.setLong(5, cat.getId());
+                preparedStmt.setLong(4, cat.getFatherId());
+                preparedStmt.setLong(5, cat.getMotherId());
+                preparedStmt.setString(6, cat.getColor());
+                preparedStmt.setLong(7, cat.getId());
 
                 preparedStmt.executeUpdate();
                 System.out.println("Cat updated.");

@@ -30,26 +30,6 @@ public class UpdateCat extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         CatServiceImplementation catServiceImplementation = new CatServiceImplementation();
         Cat cat = new Cat();
-
-        Long id = Long.valueOf(request.getParameter("catId"));
-        Long age = Long.valueOf(request.getParameter("age"));
-
-        String name = String.valueOf(request.getParameter("name"));
-
-        String gender = String.valueOf(request.getParameter("gender"));
-        Long fatherId = Long.valueOf(request.getParameter("fatherId"));
-        Long motherId = Long.valueOf(request.getParameter("motherId"));
-
-        String color = String.valueOf(request.getParameter("color"));
-
-        cat.setId(id);
-        cat.setAge(age);
-        cat.setName(name);
-        cat.setGender(gender);
-        cat.setColor(color);
-        cat.setMotherId(motherId);
-        cat.setFatherId(fatherId);
-
         catServiceImplementation.update(cat);
         request.getRequestDispatcher("/jsp/update.jsp").forward(request, response);
     }
