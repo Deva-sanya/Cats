@@ -7,18 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Cat has deleted.</title>
-</head>
 <body>
-<h1>Cat delete.</h1>
-<%
-    Long id = Long.valueOf(request.getParameter("catId"));
-    CatServiceImplementation catServiceImplementation = new CatServiceImplementation();
-    catServiceImplementation.deleteById(id);
-%>
-<p>
-<p><h1 align="center">Tab to logo to go to main page.</h1></p>
-<p><a href="http://localhost:8080/Cats/mainJsp"><img src="img/logo.jpg" width="500" height="500" ></a></p>
+<p><h1 align="center">Tap to logo to go to main page.</h1></p>
+<p><a href="http://localhost:8080/Cats_war/mainJsp"><img src="img/logo.jpg" width="500" height="500" method="POST"></a></p>
 </body>
 </html>

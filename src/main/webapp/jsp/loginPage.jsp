@@ -45,7 +45,7 @@
         }
     </style>
 <body>
-<form action="/Cats/login" method="POST">
+<form action="/Cats_war/login" method="POST">
     Login: <input type="text" name="login">
     <br><br>
     Password: <input type="password" name="password">
@@ -54,7 +54,7 @@
     <br/>
 </form>
 <p>
-<form action="/Cats/mainJsp" method="POST">
+<form action="/Cats_war/mainJsp" method="POST">
     <button id ="mainPage"> Go to site. </button>
     <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me

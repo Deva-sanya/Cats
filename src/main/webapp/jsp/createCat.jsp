@@ -22,9 +22,9 @@
         }
     </style>
 
-    <form action="/Cats/create" method="POST">
+    <form action="/Cats_war/create" method="POST">
 
-        Age of the cat: <input type="text" name="age">
+        Age of the cat: <input type="number" name="age">
         <br><br>
 
         Name of the cat: <input type="text" name="name">
@@ -68,8 +68,8 @@
         <button> Select.</button>
         <br><br>
     </form>
-    <p><h1 align="center">Tab to logo to go to main page.</h1></p>
-    <p><a href="http://localhost:8080/Cats/mainJsp"><img src="img/logo.jpg" width="500" height="500" ></a></p>
+    <p><h1 align="center">Tap to logo to go to main page.</h1></p>
+    <p><a href="http://localhost:8080/Cats_war/mainJsp"><img src="img/logo.jpg" width="500" height="500" method="POST"></a></p>
     </body>
 </section>
 </html>

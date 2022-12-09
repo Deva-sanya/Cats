@@ -2,6 +2,7 @@ package cats.servlets;
 
 import cats.model.Cat;
 import cats.service.CatServiceImplementation;
+import org.jetbrains.annotations.NotNull;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
@@ -16,11 +17,11 @@ import java.util.List;
 @WebServlet(name = "CreateCat")
 public class CreateCat extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(@NotNull HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/jsp/createCat.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(@NotNull HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         CatServiceImplementation catServiceImplementation = new CatServiceImplementation();
         Cat cat = new Cat();

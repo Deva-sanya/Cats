@@ -1,5 +1,7 @@
 package cats.servlets;
 
+import cats.model.Cat;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,10 +15,6 @@ public class MainJsp extends HttpServlet {
         request.getRequestDispatcher("/jsp/mainJsp.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String fatherName = String.valueOf(request.getParameter("fatherName"));
-        String motherName = String.valueOf(request.getParameter("motherName"));
-        Long fatherId = Long.valueOf(request.getParameter("fatherId"));
-        Long motherId = Long.valueOf(request.getParameter("motherId"));
         request.getRequestDispatcher("/jsp/mainJsp.jsp").forward(request, response);
     }
 }

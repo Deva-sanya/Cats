@@ -41,11 +41,11 @@
     %>
 </table>
 <p>
-<form action="/Cats/jsp/mainJsp.jsp" method="POST"></p>
+<form action="/Cats_war/jsp/mainJsp.jsp" method="POST"></p>
     <button> Return to main page.</button>
     <br><br>
 </form>
-<p><h1 align="center">Tab to logo to go to main page.</h1></p>
-<p><a href="http://localhost:8080/Cats/mainJsp"><img src="img/logo.jpg" width="500" height="500" ></a></p>
+<p><h1 align="center">Tap to logo to go to main page.</h1></p>
+<p><a href="http://localhost:8080/Cats_war/mainJsp"><img src="img/logo.jpg" width="500" height="500" ></a></p>
 </body>
 </html>

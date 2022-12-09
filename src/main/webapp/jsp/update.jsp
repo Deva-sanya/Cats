@@ -13,10 +13,10 @@
     <title>Update cat.</title>
 </head>
 <body>
-<h1>Cat updated</h1>
-<form action="/Cats/update" method="GET">
 
-    Age of the cat: <input type="text" name="age">
+<h1>Cat updated</h1>
+<form action="/Cats_war/update" method="POST">
+    Age of the cat: <input type="number" name="age">
     <br><br>
 
     Name of the cat: <input type="text" name="name">
@@ -34,8 +34,8 @@
         <%
             CatServiceImplementation catServiceImplementation = new CatServiceImplementation();
             List<Cat> fathersList = catServiceImplementation.createFathersList();
-            for (Cat cat : fathersList) {
-                out.print("<option value = '"+ cat.getId()+"'>" + cat.getName() + " " + cat.getAge() + "</option>");
+            for (Cat catFather : fathersList) {
+                out.print("<option value = '"+ catFather.getId()+"'>" + catFather.getName() + " " + catFather.getAge() + "</option>");
             }
             out.print("<option value='0'> unknown </option>");
         %>
@@ -46,25 +46,19 @@
     <select name = "motherId">
         <%
             List<Cat> mothersList = catServiceImplementation.createMothersList();
-            for (Cat cat : mothersList) {
-                out.print("<option value = '"+ cat.getId()+"'>" + cat.getName() + " " + cat.getAge() + "</option>");
+            for (Cat catMother : mothersList) {
+                out.print("<option value = '"+ catMother.getId()+"'>" + catMother.getName() + " " + catMother.getAge() + "</option>");
             }
             out.print("<option value='0'> unknown </option>");
         %>
     </select>
     <br><br>
-
     Color of the cat: <input type="text" name="color">
     <br><br>
-    <button> Select.</button>
-    <br><br>
+    <button>Update cat.</button>
 </form>
 <p>
-<form action="/Cats/mainJsp" method="POST"></p>
-    <button> Return to main page.</button>
-    <br><br>
-</form>
 <p><h1 align="center">Tab to logo to go to main page.</h1></p>
-<p><a href="http://localhost:8080/Cats/mainJsp"><img src="img/logo.jpg" width="500" height="500" ></a></p>
+<p><a href="http://localhost:8080/Cats_war/mainJsp"><img src="img/logo.jpg" width="500" height="500" method="POST"></a></p>
 </body>
 </html>
