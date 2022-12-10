@@ -15,9 +15,10 @@
 <body>
 <h1>Cat found.</h1>
 
-<p>Cat age: ${age}</p>
-<p>Cat name: ${name}</p>
-<p>Cat color: ${color}</p>
+<p>Cat age: ${cat.getAge()}</p>
+<p>Cat name: ${cat.getName()}</p>
+<p>Cat color: ${cat.getColor()}</p>
+
 <h1 align="center">Tap to logo to go to main page.</h1></p>
 <p><a href="http://localhost:8080/Cats_war/mainJsp"><img src="img/logo.jpg" width="500" height="500" method="POST"></a>
 </p>

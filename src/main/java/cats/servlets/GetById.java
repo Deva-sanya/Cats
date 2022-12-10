@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 
 @WebServlet(name = "GetById")
@@ -17,6 +18,7 @@ public class GetById extends HttpServlet {
     protected void doGet(@NotNull HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Cat cat = new Cat();
         Long id = Long.valueOf(request.getParameter("catId"));
+
         CatServiceImplementation catServiceImplementation = new CatServiceImplementation();
         cat = catServiceImplementation.getById(id);
 
