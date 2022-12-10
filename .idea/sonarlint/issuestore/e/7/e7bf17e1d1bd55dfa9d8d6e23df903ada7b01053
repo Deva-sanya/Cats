@@ -1,0 +1,6 @@
+
+cWeb:DoctypePresenceCheck	":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ
+Z	Web:S5254	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ
+J	Web:S1827")Remove this deprecated "align" attribute.( ›ÙØúÿÿÿÿ8éä®ŸË0
+SWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(²×“ùÿÿÿÿ8éä®ŸË0
+PWeb:PageWithoutTitleCheck	"Add a <title> tag to this page.(œ÷Ãûÿÿÿÿ8¯üËÀÎ0

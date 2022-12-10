@@ -1,0 +1,27 @@
+
+q
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "cat".(ñ¸’ë
+€
+java:S1488"cImmediately return this expression instead of assigning it to the temporary variable "mothersList".(ÛÍıĞ8æÖ¬ìË0
+
+java:S1488"cImmediately return this expression instead of assigning it to the temporary variable "fathersList".(Å®ş(8Ïé¬ìË0
+r
+java:S1488J"\Immediately return this expression instead of assigning it to the temporary variable "cats".(ï´ƒ˜
+W	java:S125"<This block of commented-out lines of code should be removed.(»ƒ¹&8ğÖ¬ìË0
+X	java:S125"<This block of commented-out lines of code should be removed.(ü”æÛ8Úé¬ìË0
+V	java:S125("<This block of commented-out lines of code should be removed.(½ë°şüÿÿÿÿ
+N
+java:S1854?"8Remove this useless assignment to local variable "cats".(Ş½Áª
+A
+java:S1168A"+Return an empty collection instead of null.(¥¹ï
+Q	java:S125@"<This block of commented-out lines of code should be removed.(ªÍµÊ
+U
+java:S1854E"8Remove this useless assignment to local variable "cats".(º®ğ§8«ÑæÌ0
+A
+java:S1168F"+Return an empty collection instead of null.(¥¹ï
+Q	java:S125K"<This block of commented-out lines of code should be removed.(ªÍµÊ
+N	java:S106U"9Replace this use of System.out or System.err by a logger.(ª ØÕ
+S	java:S106Z"9Replace this use of System.out or System.err by a logger.(âîìşÿÿÿÿÿ
+Q	java:S125`"<This block of commented-out lines of code should be removed.(À«©
+K
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8„ê¬ìË0

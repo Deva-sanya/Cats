@@ -84,7 +84,7 @@
                     motherName = mother.getName();
                 }
 
-                out.print("<tr>" + "<td> <form action=/Cats_war/getById method='POST'>" +
+                out.print("<tr>" + "<td> <form action=/Cats_war/getById method='GET'>" +
                         "<button name = 'catId' value ='" + catFromList.getId() + "'>View information about cat.</button></form></td>" +
                         "<td> <form action=/Cats_war/update method='GET'>" +
                         "<button name = 'catId' value ='" + catFromList.getId() + "'>Update cat.</button></form></td>" +

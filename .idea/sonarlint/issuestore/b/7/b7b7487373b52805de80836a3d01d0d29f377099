@@ -1,0 +1,46 @@
+
+t
+java:S11925"YDefine a constant instead of duplicating this literal "Enter the id of the cat." 4 times.(Æ“‹þÿÿÿÿ
+S
+java:S1854G"=Remove this useless assignment to local variable "fathersId".(¦÷ûØ
+”
+java:S1130"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ñ˜«„þÿÿÿÿ
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ñ˜«„þÿÿÿÿ
+G
+java:S2440"1Remove this instantiation of "DataBaseConnector".(´Ààî
+K
+java:S2209"5Change this instance-reference to a static reference.(Ïñ¹¤
+N	java:S106"9Replace this use of System.out or System.err by a logger.(±ïˆ¿
+S	java:S106"9Replace this use of System.out or System.err by a logger.(­­¥šûÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(½ú˜Žùÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(æÜ´Úþÿÿÿÿ
+M	java:S106""9Replace this use of System.out or System.err by a logger.(‹ï‡(
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(ó€Õú
+N	java:S106$"9Replace this use of System.out or System.err by a logger.(³Ë·
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(¢òËÅøÿÿÿÿ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(¼õâŸÿÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(¨¹°°üÿÿÿÿ
+S	java:S1065"9Replace this use of System.out or System.err by a logger.(Æ“‹þÿÿÿÿ
+N	java:S1069"9Replace this use of System.out or System.err by a logger.(ðØ ˜
+N	java:S106>"9Replace this use of System.out or System.err by a logger.(çéÎê
+N	java:S106B"9Replace this use of System.out or System.err by a logger.(¢á”·
+S	java:S106F"9Replace this use of System.out or System.err by a logger.(žµ¨ƒüÿÿÿÿ
+D
+java:S1481G".Remove this unused "fathersId" local variable.(¦÷ûØ
+S	java:S106S"9Replace this use of System.out or System.err by a logger.(ñù¶Åøÿÿÿÿ
+V	java:S125J"<This block of commented-out lines of code should be removed.(Ï©ñ¡þÿÿÿÿ
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(ð’Âæýÿÿÿÿ
+S	java:S106]"9Replace this use of System.out or System.err by a logger.(Æ“‹þÿÿÿÿ
+S	java:S106e"9Replace this use of System.out or System.err by a logger.(Æ“‹þÿÿÿÿ
+N	java:S106j"9Replace this use of System.out or System.err by a logger.(ñ‡³¯
+S	java:S106x"9Replace this use of System.out or System.err by a logger.(Æ“‹þÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(çéÎê
+T	java:S106†"9Replace this use of System.out or System.err by a logger.(¦ýÔþÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ð’Âæýÿÿÿÿ
+N	java:S106•"9Replace this use of System.out or System.err by a logger.(ã‘¡u
+T	java:S106š"9Replace this use of System.out or System.err by a logger.(ÞÔªÈùÿÿÿÿ
+W	java:S125¢"<This block of commented-out lines of code should be removed.(ûåÓúÿÿÿÿ
+T	java:S106­"9Replace this use of System.out or System.err by a logger.(¨¹°°üÿÿÿÿ
+D
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw
