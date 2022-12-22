@@ -28,13 +28,12 @@ public class LoginPage extends HttpServlet {
         userFromDataBase = catServiceImplementation.getByLogin(login);
         String usersPasswordFromDataBase = userFromDataBase.getPassword();
 
-        if (password != null && usersPasswordFromDataBase.equals(password) && userFromDataBase != null) {
+        if (usersPasswordFromDataBase != null && usersPasswordFromDataBase.equals(password) && userFromDataBase != null) {
             response.sendRedirect("http://localhost:8080/Cats_war/jsp/mainJsp.jsp");
         } else {
             try {
-                catServiceImplementation.createUser(user);
                 response.sendRedirect("http://localhost:8080/Cats_war/jsp/signUp.jsp");
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 throw new RuntimeException("error password or login!");
             }
         }

@@ -26,8 +26,8 @@ public class SignUp extends HttpServlet {
         user.setPassword(password);
 
             try {
+                response.sendRedirect("http://localhost:8080/Cats_war/jsp/mainJsp.jsp");
                 catServiceImplementation.createUser(user);
-                response.sendRedirect("http://localhost:8080/Cats_war/jsp/signUp.jsp");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }

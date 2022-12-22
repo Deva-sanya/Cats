@@ -52,7 +52,7 @@ public class CatDaoImplementation implements CatDao {
                 }
                 if (user.getLogin() != null) {
                     System.out.println(user.getPassword());
-                    return user;
+                    //return user;
                 }
                 st.close();
             }
