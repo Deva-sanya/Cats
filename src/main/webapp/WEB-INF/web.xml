@@ -35,12 +35,28 @@
         <url-pattern>/delete</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>deleteUser</servlet-name>
+        <servlet-class>cats.servlets.DeleteUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteUser</servlet-name>
+        <url-pattern>/deleteUser</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>getById</servlet-name>
         <servlet-class>cats.servlets.GetById</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getById</servlet-name>
         <url-pattern>/getById</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>signUp</servlet-name>
+        <servlet-class>cats.servlets.SignUp</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>signUp</servlet-name>
+        <url-pattern>/signUp</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>createCat</servlet-name>
@@ -78,8 +94,16 @@
         <servlet-name>loginPage</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>logoutPage</servlet-name>
+        <servlet-class>cats.servlets.LogoutPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logoutPage</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
 
-    <security-constraint>
+    <!--security-constraint>
         <web-resource-collection>
             <web-resource-name>jsp</web-resource-name>
             <url-pattern>/jsp/*</url-pattern>
@@ -99,5 +123,5 @@
             <form-login-page>/login</form-login-page>
             <form-error-page>/error403.html</form-error-page>
         </form-login-config>
-    </login-config>
+    </login-config-->
 </web-app>

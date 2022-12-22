@@ -2,11 +2,10 @@ package cats.dao;
 
 import cats.connector.DataBaseConnector;
 import cats.model.Cat;
-import cats.model.Users;
+import cats.model.User;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -38,6 +37,31 @@ public class CatDaoImplementation implements CatDao {
         return cat;
     }
 
+    public User getByLogin(String login) {
+        User user = new User();
+
+        try (Connection connection = DataBaseConnector.getDBConnection()) {
+
+            if (connection != null) {
+
+                Statement st = connection.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM users WHERE login='" + login+"'");
+
+                while (rs.next()) {
+                    user = setUser(rs);
+                }
+                if (user.getLogin() != null) {
+                    System.out.println(user.getPassword());
+                    return user;
+                }
+                st.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
     @Override
     public List<Cat> getAll() {
         List<Cat> cats = new ArrayList<>();
@@ -58,6 +82,7 @@ public class CatDaoImplementation implements CatDao {
         }
         return cats;
     }
+
 
     /*public ResultSet checkParent(Long fatherId) throws SQLException {
 
@@ -131,7 +156,7 @@ public class CatDaoImplementation implements CatDao {
                 insertSQL.setString(6, cat.getColor());
 
                 try {
-                insertSQL.executeUpdate();
+                    insertSQL.executeUpdate();
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
@@ -141,12 +166,12 @@ public class CatDaoImplementation implements CatDao {
         return cat;
     }
 
-    public Users createUser(Users user) throws SQLException {
+    public User createUser(User user) throws SQLException {
 
         try (Connection connection = DataBaseConnector.getDBConnection()) {
             if (connection != null) {
                 PreparedStatement insertSQL = connection.prepareStatement(
-                        "INSERT INTO users (login,password) " + "VALUES (?, ?)");
+                        "INSERT INTO Users (login, password)  VALUES (?, ?)");
 
                 insertSQL.setString(1, user.getLogin());
                 insertSQL.setString(2, user.getPassword());
@@ -154,12 +179,30 @@ public class CatDaoImplementation implements CatDao {
                 try {
                     insertSQL.executeUpdate();
                 } catch (SQLException e) {
-                    throw new RuntimeException("You have page already.");
+                    throw new RuntimeException(e);
                 }
                 System.out.println("user insert.");
             }
         }
         return user;
+    }
+
+    public boolean deleteUser(String login) {
+
+        try (Connection connection = DataBaseConnector.getDBConnection()) {
+
+            if (connection != null) {
+                PreparedStatement preparedStmt = connection.prepareStatement("DELETE FROM users WHERE login = ?");
+                preparedStmt.setString(1, login);
+
+                preparedStmt.executeUpdate();
+                System.out.println("Your account delete.");
+                preparedStmt.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     @Override
@@ -317,10 +360,10 @@ public class CatDaoImplementation implements CatDao {
         return cat;
     }
 
-    private Users setUser(ResultSet rs) throws SQLException {
-        Users user = new Users();
+    private User setUser(ResultSet rs) throws SQLException {
+        User user = new User();
         user.setLogin(rs.getString("login"));
-        user.setLogin(rs.getString("password"));
+        user.setPassword(rs.getString("password"));
         return user;
     }
 }

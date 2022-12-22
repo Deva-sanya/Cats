@@ -1,5 +1,3 @@
-<%@ page import="cats.service.CatServiceImplementation" %>
-<%@ page import="cats.model.Cat" %>
 <%--
   Created by IntelliJ IDEA.
   User: alexchem

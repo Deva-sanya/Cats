@@ -3,7 +3,7 @@ package cats.controller;
 
 import cats.connector.DataBaseConnector;
 import cats.model.Cat;
-import cats.model.Users;
+import cats.model.User;
 import cats.service.CatServiceImplementation;
 
 
@@ -17,7 +17,7 @@ public class ConsoleController {
         CatServiceImplementation catsServices = new CatServiceImplementation();
 
         Cat cat = new Cat();
-        Users user = new Users();
+        User user = new User();
         Scanner scan = new Scanner(System.in);
         int x = 0;
         int s;
@@ -168,6 +168,12 @@ public class ConsoleController {
 
                     catsServices.getFatherNameById(fatherId);
                     break;*/
+                case 10:
+                    System.out.println("Enter the login");
+                    login = scan.nextLine();
+                    scan.nextLine();
+                    user.setLogin(login);
+                    catsServices.getByLogin(login);
                 default:
                     if (s >= 15) {
                         System.out.println("Invalid input.");

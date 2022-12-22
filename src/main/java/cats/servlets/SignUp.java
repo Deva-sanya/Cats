@@ -9,34 +9,27 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "LoginPage")
-public class LoginPage extends HttpServlet {
+@WebServlet(name = "SignUp")
+public class SignUp extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/jsp/loginPage.jsp").forward(request, response);
+        request.getRequestDispatcher("/jsp/signUp.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = new User();
         CatServiceImplementation catServiceImplementation = new CatServiceImplementation();
-        User userFromDataBase;
 
         String login = String.valueOf(request.getParameter("login"));
         String password = String.valueOf(request.getParameter("password"));
 
         user.setLogin(login);
         user.setPassword(password);
-        userFromDataBase = catServiceImplementation.getByLogin(login);
-        String usersPasswordFromDataBase = userFromDataBase.getPassword();
 
-        if (password != null && usersPasswordFromDataBase.equals(password) && userFromDataBase != null) {
-            response.sendRedirect("http://localhost:8080/Cats_war/jsp/mainJsp.jsp");
-        } else {
             try {
                 catServiceImplementation.createUser(user);
                 response.sendRedirect("http://localhost:8080/Cats_war/jsp/signUp.jsp");
             } catch (SQLException e) {
-                throw new RuntimeException("error password or login!");
+                throw new RuntimeException(e);
             }
         }
     }
-}

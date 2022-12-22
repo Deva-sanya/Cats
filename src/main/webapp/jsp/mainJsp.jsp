@@ -17,21 +17,17 @@
             background-color: darkseagreen;
             text-align: center;
         }
-
         table {
             width: 300px; /* Ширина таблицы */
             border: 5px solid green; /* Рамка вокруг таблицы */
             margin: auto; /* Выравниваем таблицу по центру окна  */
         }
-
         td {
             text-align: center; /* Выравниваем текст по центру ячейки */
         }
-
         h1 {
             color: blue;
         }
-
         h3 {
             color: darkgreen;
         }
@@ -61,29 +57,24 @@
     <%
         CatServiceImplementation catServiceImplementation = new CatServiceImplementation();
         List<Cat> cats = catServiceImplementation.getAll();
-
         for (Cat catFromList : cats) {
             {
                 Cat father = catServiceImplementation.getById(catFromList.getFatherId());
                 Cat mother = catServiceImplementation.getById(catFromList.getMotherId());
-
                 Long fatherId = catFromList.getFatherId();
                 Long motherId = catFromList.getMotherId();
                 String fatherName = null;
                 String motherName = null;
-
                 if (fatherId == 0) {
                     fatherName = "unknown";
                 } else {
                     fatherName = father.getName();
                 }
-
                 if (motherId == 0) {
                     motherName = "unknown";
                 } else {
                     motherName = mother.getName();
                 }
-
                 out.print("<tr>" + "<td> <form action=/Cats_war/getById method='GET'>" +
                         "<button name = 'catId' value ='" + catFromList.getId() + "'>View information about cat.</button></form></td>" +
                         "<td> <form action=/Cats_war/update method='GET'>" +
@@ -103,6 +94,11 @@
         <button>Create new cat.</button>
     </form>
 </div>
+<form action="/Cats_war/logout"  method="POST">
+    <button>Logout</button>
+</form>
+<form action="/Cats_war/deleteUser" value="Delete account" method="POST">
+    <button>Delete account</button>
+</form>
 </body>
-</section>
 </html>

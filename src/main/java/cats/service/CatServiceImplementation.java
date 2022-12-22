@@ -2,9 +2,8 @@ package cats.service;
 
 import cats.dao.CatDaoImplementation;
 import cats.model.Cat;
-import cats.model.Users;
+import cats.model.User;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +15,11 @@ public class CatServiceImplementation implements CatService {
     public Cat getById(Long id) {
         Cat cat = catDaoImplementation.getById(id);
         return cat;
+    }
+
+    public User getByLogin(String login) {
+        User user = catDaoImplementation.getByLogin(login);
+        return user;
     }
 
     public List<Cat> createMothersList () {
@@ -46,7 +50,7 @@ public class CatServiceImplementation implements CatService {
     public Cat createCat(Cat cat) throws SQLException {
         return catDaoImplementation.createCat(cat);
     }
-    public Users createUser(Users user) throws SQLException {
+    public User createUser(User user) throws SQLException {
         return catDaoImplementation.createUser(user);
     }
     @Override
@@ -59,14 +63,18 @@ public class CatServiceImplementation implements CatService {
         return catDaoImplementation.deleteById(id);
     }
 
+    public boolean deleteUser(String login) {
+        return catDaoImplementation.deleteUser(login);
+    }
+
     public List<Cat> getByName(String name) {
-        List<Cat> cats = catDaoImplementation.getByName(name);//вызываем обьект дао из сервиса так как сервис это между
+        List<Cat> cats = catDaoImplementation.getByName(name);
         //printList(cats);
         return null;
     }
 
     public List<Cat> getFatherNameById(Long fatherId) {
-        List<Cat> cats = catDaoImplementation.getFatherNameById(fatherId);//вызываем обьект дао из сервиса так как сервис это между
+        List<Cat> cats = catDaoImplementation.getFatherNameById(fatherId);
         return null;
     }
 
@@ -80,7 +88,7 @@ public class CatServiceImplementation implements CatService {
         List<Cat> cats = catDaoImplementation.findChildren(id);
         List<String> catsName = new ArrayList<>();
         for (Cat cat : cats) {
-            catsName.add(cat.getName());//передала результат запроса в лист стрингов
+            catsName.add(cat.getName());
         }
         System.out.println("Parent: " + "Id:" + " " + cats.get(0).getFatherId() + " " + " " + "Children:" + " " + catsName);
     }

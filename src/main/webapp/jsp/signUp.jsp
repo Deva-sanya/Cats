@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: alexchem
-  Date: 008 08.11.22
-  Time: 19:29
+  Date: 022 22.12.22
+  Time: 18:34
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -32,7 +32,7 @@
     </style>
 <body>
 
-<form action="/Cats_war/login" method="POST">
+<form action="/Cats_war/signUp" method="POST">
     <table style="with: 50%">
         <tr>
             <td>UserName</td>
@@ -43,10 +43,8 @@
             <td><input type="password" name="password"/></td>
         </tr>
     </table>
-    <button>Login</button>
-</form>
-<form action="/Cats_war/signUp">
     <button>Sign Up</button>
 </form>
 </body>
 </html>
+

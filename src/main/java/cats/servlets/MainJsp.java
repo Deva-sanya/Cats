@@ -1,7 +1,5 @@
 package cats.servlets;
 
-import cats.model.Cat;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,4 +16,3 @@ public class MainJsp extends HttpServlet {
         request.getRequestDispatcher("/jsp/mainJsp.jsp").forward(request, response);
     }
 }
-
